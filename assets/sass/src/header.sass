@@ -1,107 +1,109 @@
 $horizontal-margin: 13.75px
 $icon-width: 23.6px
 
-.header
-  background-color: white
-  position: fixed
-  z-index: 1
-  width: 100%
-  border-bottom: solid
-  border-bottom-width: 1px
-  border-color: rgb(228, 227, 226)
-
-  img
-    margin-top: 17.5px
-    margin-left: $horizontal-margin
-    margin-bottom: 12.5px
-    margin-right: $horizontal-margin
-
-  h1
-    text-align: center
-    margin: 0
-
-  // hr
-  //   border: 0
-  //   color: rgb(228, 227, 226)
-  //   background-color: rgb(228, 227, 226)
-  //   height: 1px
-  //   width: 100%
-  //   text-align: left
-  //   margin: 0
-
-  ul
-    visibility: hidden
-    height: 0
-    width: 0
-    padding: 0
-    margin: 0
-    li
-      border-top: solid
-      border-top-width: 1px
-      border-color: rgb(228, 227, 226)
-      list-style-type: none
-      height: 40px
-      padding: 10px
-      font-family: "raleway"
-      font-size: 1.2em
-      font-style: normal
-    li:hover
-      background-color: rgba(203, 154, 51, 0.5)
-
-  ul.visible, form.visible
-    visibility: visible
-    height: auto
+@media screen and (max-width: 1024px)
+  .header
+    background-color: white
+    position: fixed
+    z-index: 1
     width: 100%
-    float: left
-    text-align: center
+    border-bottom: solid
+    border-bottom-width: 1px
+    border-color: rgb(228, 227, 226)
 
-  form
-    visibility: hidden
-    height: 0
-    width: 0
-    input
-      width: 90%
-      padding: 10px
-      padding-left: 50px
-      border-style: none
-      border-top-width: 1px
-      border-top-style: solid
-      border-top-color: rgb(228, 227, 226)
+    img
+      margin-top: 17.5px
+      margin-left: $horizontal-margin
+      margin-bottom: 12.5px
+      margin-right: $horizontal-margin
 
-    input[type="submit"]
-      padding: 10px
-      font-family: "raleway"
-      font-size: 0.8em
-      font-style: normal
-      width: 9%
-    p
-      position: relative
+    h1
+      text-align: center
       margin: 0
 
-    label
-      position: absolute
-      top: 50%
-      transform: translateY(calc(-50% + 1px))
-      left: 10px
-      img
-        width: 14px
+    ul
+      visibility: hidden
+      height: 0
+      width: 0
+      padding: 0
+      margin: 0
+      li
+        border-top: solid
+        border-top-width: 1px
+        border-color: rgb(228, 227, 226)
+        list-style-type: none
+        height: 40px
+        padding: 10px
+        font-family: "raleway"
+        font-size: 1.2em
+        font-style: normal
+      li:hover
+        background-color: rgba(203, 154, 51, 0.5)
 
-  .icon
-    width: $icon-width
-    height: 20.1px
+    ul.visible, form.visible
+      visibility: visible
+      height: auto
+      width: 100%
+      float: left
+      text-align: center
 
-  #logo
-    width: 135px
-    height: 22.5px
-    margin-bottom: 0
+    form
+      visibility: hidden
+      height: 0
+      width: 0
+      input
+        padding: 10px
+        padding-left: 50px
+        border-style: none
+        border-top-width: 1px
+        border-top-style: solid
+        border-top-color: rgb(228, 227, 226)
 
-  #burger
-    float: left
+      input[type="submit"]
+        padding: 10px
+        font-family: "raleway"
+        font-size: 0.8em
+        font-style: normal italic
+      p
+        position: relative
+        margin: 0
 
-  #search-header
-    float: right
+      label
+        position: absolute
+        top: 50%
+        transform: translateY(calc(-50% + 1px))
+        left: 10px
+        img
+          width: 14px
 
-@media screen and (min-width: $width-break)
+    .nav-icon
+      width: $icon-width
+      height: 20.1px
+
+    #logo
+      width: 135px
+      height: 22.5px
+      margin-bottom: 0
+
+    #burger
+      float: left
+
+    #search-header
+      float: right
+
+@media screen and (min-width: 768px)
   .header #logo
     width: 173px
     height: 29px
+
+@media screen and (min-width: 1024px)
+  div, p
+    font-size: 11px
+    font: "arial"
+  img
+    height: 20px
+  #burger, #search-header, label
+    display: none
+  button > div
+    padding-bottom: 10px
+    display: inline-block
