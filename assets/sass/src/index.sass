@@ -7,9 +7,26 @@ $width-break: 500px
 @import 'promises.sass'
 @import 'prestations.sass'
 @import 'footer.sass'
+@import 'pub.sass'
 
 *
   box-sizing: border-box
 
 input[type="submit"]
   cursor:pointer
+
+a
+  text-decoration: none
+  color: inherit
+
+@media screen and (max-width: 1024px)
+  .large-screen
+    display: none
+  .small-screen
+    display: inherit
+
+@media screen and (min-width: 1024px)
+  .small-screen
+    display: none
+  .large-screen
+    display: inherit

@@ -1,42 +1,76 @@
 .promises
-  font-size: 1em
-
-  ul
-    width: 100%
-    padding: 0
-    padding-left: 20px
-    float: left
-
+  font-size: 16px
+  img
+    position: absolute
+    left: -5px
   li
-    width: 50%
-    display: block
-    vertical-align: text-top
     position: relative
     font-family: 'raleway'
     font-style: normal
-    font-size: 0.69em
     color: rgb(161, 161, 161)
-    //11px
-    float: left
-    padding-right: 15px
-
-    img
-      position: absolute
-      top: 15px
-      left: -5px
-      height: 12px
-
-  li:nth-child(3)
-    clear: left
 
   span
     display: block
     color: rgb(203, 155, 43)
 
-  span:nth-of-type(1)
-    font-size: 1.63em
-    //18px
 
-  p
-    padding-left: 15px
-    width: calc(100% - 10px)
+@media screen and (max-width: 1023px)
+  .promises
+    font-size: 1em
+
+    ul
+      width: 100%
+      padding: 0
+      padding-left: 20px
+      float: left
+
+    li
+      width: 50%
+      display: block
+      vertical-align: text-top
+      position: relative
+      font-size: 0.69em
+      img
+        top: 15px
+        height: 15px
+
+      //11px
+      float: left
+      padding-right: 15px
+
+    li:nth-child(3)
+      clear: left
+
+    span:nth-of-type(1)
+      font-size: 1.63em
+      //18px
+
+    p
+      padding-left: 15px
+      width: calc(100% - 10px)
+
+@media screen and (min-width: 1024px)
+  .promises
+    img
+      height: 25px
+    ul
+      text-align: center
+      list-style: none
+      width: 100%
+      height: 180px
+      background-color: rgb(38,38,38)
+      margin: 0
+      padding-top: 10px
+      li
+        text-align: left
+        display: inline-block
+        width: 230px
+        height: 160px
+        padding-left: 50px
+        vertical-align: top
+        img
+          top: 25px
+    span:nth-of-type(1)
+      font-size: 2.1em
+    span:nth-of-type(2)
+      font-size: 1.3em

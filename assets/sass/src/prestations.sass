@@ -1,69 +1,146 @@
 .prestations
-  clear: both
-  font-size: 1em
+  font-size: 16px
   background-color: rgb(247, 247, 247)
-
-  figure
-    margin: 0
-    img
-      width: 100%
-    font-family: arial
-    font-size: 0.75em
-    margin-bottom: 10px
-
-  figcaption
-    margin-left: 5px
-
-  a:nth-child(4)
-    figcaption
-      margin-left: 0
-
-
-  a:nth-child(4), a:nth-child(3)
-    figure
-      width: 50%
-      float: left
-      img
-        height: 100px
-  a
-    text-decoration: none
-    color: rgb(38, 38, 38)
-
-
-  a:nth-child(3)
-    figure
-      padding-right: 10px
-
-  a:last-child
-    display: inline-block
-    border-width: 1px
-    border-style: solid
-    padding: 15px
-    margin-top: 15px
-    width: calc(100% - 20px)
-    text-align: center
-    clear: both
-    position: relative
-    margin-left: 10px
-    margin-right: 10px
-    margin-bottom: 17px
-    img
-      width: 15px
-      position: absolute
-      top: 50%
-      transform: translateY(-50%)
-      right: 7.8%
-
-  span
-    color: rgb(203, 155, 43)
-    font-style: italic
-
   p
-    font-size: 1em
     font-family: 'raleway-extralight'
     text-align: center
     padding: 22px
     margin: 0
+    span
+      color: rgb(203, 155, 43)
+
+@media screen and (max-width: 1023px)
+  .prestations
+    clear: both
+
+
+    figure
+      margin: 0
+      img
+        width: 100%
+      font-family: arial
+      font-size: 0.75em
+      margin-bottom: 10px
+
+    figcaption
+      margin-left: 5px
+
+    a:nth-child(4)
+      figcaption
+        margin-left: 0
+
+
+    a:nth-child(4), a:nth-child(3)
+      figure
+        width: 50%
+        float: left
+    a
+      text-decoration: none
+      color: rgb(38, 38, 38)
+
+
+    a:nth-child(3)
+      figure
+        padding-right: 10px
+
+    a:last-child
+      display: inline-block
+      border-width: 1px
+      border-style: solid
+      padding: 15px
+      margin-top: 15px
+      width: calc(100% - 20px)
+      text-align: center
+      clear: both
+      position: relative
+      margin-left: 10px
+      margin-right: 10px
+      margin-bottom: 17px
+      img
+        width: 15px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 7.8%
 
     span
       color: rgb(203, 155, 43)
+      font-style: italic
+
+    p
+      font-size: 1em
+
+      span
+        color: rgb(203, 155, 43)
+
+@media screen and (min-width: 1024px)
+  .prestations
+    a
+      img
+        filter: alpha(opacity=100)
+        -moz-opacity: 1
+        opacity: 1
+    a:hover
+      img
+        filter: alpha(opacity=80)
+        -moz-opacity: 0.8
+        opacity: 0.8
+      span
+        color: rgb(203, 155, 43)
+
+    p
+      font-size: 3em
+
+    a
+      text-align: center
+      figcaption
+        text-align: left
+
+    a:nth-child(2)
+      figure
+        width: 82%
+        margin: auto
+        padding: 0
+        img
+          width: 100%
+
+    .droite-gauche-container
+
+    #gauche, #droite
+      width: 40%
+
+    #gauche
+      float: left
+      margin: 0
+      margin-left: 9%
+      a:first-child
+        clear: both
+
+      a
+        display: block
+        width: 100%
+        figure
+          width: 100%
+          margin: 0
+          padding: 0
+          img
+            width: 100%
+
+    #droite
+      float: right
+      margin: 0
+      margin-right: 9%
+      a
+        display: block
+        width: 100%
+        figure
+          width: 100%
+          margin: 0
+          padding: 0
+          padding: 0
+          img
+            width: 100%
+          figcaption
+            clear: both
+    #droite::after
+      clear: both

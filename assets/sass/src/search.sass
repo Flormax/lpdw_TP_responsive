@@ -1,84 +1,155 @@
-.banner
-  font-size: 1.0rem
-  //16px
 .search
-  padding-top: 50px
-  clear: both
+  .banner
+    font-size: 16px
 
-.banner
-  img
-    width: 100%
-    display: block
-
-  figure
-    position: relative
-    margin: 0
-
-  figcaption
-    position: absolute
-    top: 50%
-    right: 4.68%
-    transform: translateY(-50%)
-    text-align: right
-    font-family: arial
-    font-size: 0.6875em
-    //11px
-
-.search-form
-  input:nth-child(-n+3)
-    padding-left: 42px
-
-  input
-    width: 100%
-    height: 50px
-    font-family: arial
-    font-size: 0.875em
-    border-style: none
-
-  button
-    width: 100%
-    height: 45px
-    background-color: rgb(38, 38, 38)
-    color: white
-    border: 0
-    font-family: "raleway"
-    font-style: normal
-    font-size: 1.06em
-  // input::-webkit-input-placeholder
-  //   margin-left: 50px
-  // input:-moz-placeholder  /* Firefox 18- */
-  //   margin-left: 50px
-  // input::-moz-placeholder   /* Firefox 19+ */
-  //   margin-left: 50px
-  // input:-ms-input-placeholder
-  //   margin-left: 50px
-
-  p
-    position: relative
-    margin: 0
-    border-top: solid
-    border-width: 2px
-    border-color: rgb(219, 219, 219)
-  p:last-child
-    padding: 10px
-    background-color: rgb(196, 196, 196)
-
-  label
     img
-      width: 14px
+      width: 100%
+      display: block
 
-    position: absolute
-    top: 50%
-    transform: translateY(calc(-50% + 1px))
-    left: 20px
+    figure
+      margin: 0
+      position: relative
+
+  form
+    input
+      border-style: none
+      border-width: 0
+      bor
+    label
+      position: absolute
+      top: 50%
+      transform: translateY(calc(-50% + 1px))
+      left: 17px
+      img
+        width: 17px
+    button
+      background-color: rgb(38, 38, 38)
+      color: white
+      border: 0
+      font-family: "raleway"
+      font-style: normal
+      font-size: 1.06em
+    p
+      position: relative
+    input:nth-child(-n+3)
+      padding-left: 42px
+
+
+@media screen and (max-width: 1023px)
+  .search
+    padding-top: 50px
+
+  .banner
+    figure
+      position: relative
+
+    figcaption
+      p
+        width: 60%
+        text-align: right
+        position: absolute
+        top: 50%
+        right: 4.68%
+        transform: translateY(-50%)
+        text-align: right
+        font-family: arial
+        font-size: 0.75em
+        height: 75px
+
+  .search-form
+    input:nth-child(-n+3)
+      padding-left: 42px
+
+    input
+      width: 100%
+      height: 50px
+      font-family: arial
+      font-size: 0.875em
+      border-style: none
+      border-width: 0
+
+    button
+      width: 100%
+      height: 45px
+
+    // input::-webkit-input-placeholder
+    //   margin-left: 50px
+    // input:-moz-placeholder  /* Firefox 18- */
+    //   margin-left: 50px
+    // input::-moz-placeholder   /* Firefox 19+ */
+    //   margin-left: 50px
+    // input:-ms-input-placeholder
+    //   margin-left: 50px
+
+    p
+      margin: 0
+      border-top: solid
+      border-width: 2px
+      border-color: rgb(219, 219, 219)
+    p:last-child
+      padding: 10px
+      background-color: rgb(196, 196, 196)
+
+  @media screen and (min-width: 768px)
+    .search
+      padding-top: 0
+    .banner figcaption
+      font-size: 1.5em
+
+    .search-form input
+      font-size: 1.0em
 
 @media screen and (min-width: 1024px)
-  .banner figcaption
-    font-size: 1.375em
-    //22px
-
-  .search-form input
-    font-size: 1.0em
-
   .search
-    padding-top: 5px
+    .banner
+      figcaption
+        width: 60%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate3d(-50%, calc(-50% - 132px), 0)
+        text-align: center
+        font-family: "raleway"
+        font-size: 1.1em
+        height: 75px
+        width: 550px
+        p
+        span:nth-child(1)
+          font-size: 3rem
+          span
+            font-family: "raleway-bold"
+        span:nth-child(2)
+          line-height: 100px
+    .search-form
+      position: relative
+      form
+        position: absolute
+        top: -120px
+        z-index: 200
+        height: 120px
+        width: 100%
+        background-color: rgba(38, 38, 38, 0.5)
+        text-align: center
+        input
+          height: 60px
+          margin: 30px 0
+        p:nth-child(1), #resa
+          width: 300px
+        p:nth-child(2), #ville
+          width: 240px
+        p:nth-child(3), #date
+          width: 200px
+      p
+        display: inline
+        margin: 0
+        padding: 0
+        font-size: 0.9em
+        -webkit-margin-before: 0px
+        -webkit-margin-after: 0px
+
+
+
+      button
+        height: 60px
+        width: 180px
+        padding: 15px 35px

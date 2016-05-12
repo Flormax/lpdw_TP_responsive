@@ -1,0 +1,210 @@
+$horizontal-margin: 13.75px
+$icon-width: 23.6px
+
+.header
+  z-index: 10
+  position: relative
+
+@media screen and (max-width: 1023px)
+  .topbar
+    display: none
+
+  .header
+    background-color: white
+    position: fixed
+    z-index: 1
+    width: 100%
+    border-bottom: solid
+    border-bottom-width: 1px
+    border-color: rgb(228, 227, 226)
+
+    img
+      margin-top: 17px
+      margin-left: $horizontal-margin
+      margin-bottom: 12px
+      margin-right: $horizontal-margin
+      height: 15px
+
+    h1
+      text-align: center
+      margin: 0
+
+    ul
+      visibility: hidden
+      height: 0
+      width: 0
+      padding: 0
+      margin: 0
+      li
+        border-top: solid
+        border-top-width: 1px
+        border-color: rgb(228, 227, 226)
+        list-style-type: none
+        height: 40px
+        padding: 10px
+        font-family: "raleway"
+        font-size: 1em
+        font-style: normal
+      li:hover
+        background-color: rgba(203, 154, 51, 0.5)
+
+    ul.visible, form.visible
+      visibility: visible
+      height: auto
+      width: 100%
+      float: left
+      text-align: center
+
+    form
+      visibility: hidden
+      height: 0
+      width: 0
+      input
+        width: 100%
+        padding: 10px
+        border-style: none
+        border-top-width: 1px
+        border-top-style: solid
+        border-top-color: rgb(228, 227, 226)
+        position: relative
+
+      button
+        padding: 10px
+        font-family: "raleway"
+        font-size: 0.8em
+        font-style: normal italic
+        position: absolute
+        right: 5px
+        top: 2px
+        background-color: white
+        border-style: none
+      p
+        position: relative
+        margin: 0
+
+      label
+        position: absolute
+        top: 50%
+        transform: translateY(calc(-50% + 1px))
+        left: 10px
+        img
+          width: 14px
+
+    .nav-icon
+      width: $icon-width
+      height: 20.1px
+
+    #logo
+      width: 135px
+      height: 22px
+      margin-bottom: 0
+
+    #burger
+      float: left
+
+    #search-header
+      float: right
+
+@media screen and (min-width: 768px)
+  .header #logo
+    width: 173px
+    height: 29px
+
+@media screen and (min-width: 1024px)
+  .header
+    .topbar
+      height: 45px
+      background-color: rgb(247, 247, 247)
+      padding: 0 20px
+      .topbar-left
+        float: left
+      .topbar-right
+        float: right
+
+      div, p
+        font-size: 11px
+        font: "arial"
+        margin: 0
+        padding: 0
+        display: inline-block
+      p
+        line-height: 45px
+
+      img
+        height: 15px
+
+      .fb-like
+        vertical-align: middle
+
+      .phone-number, .appli
+        position: relative
+        img
+          position: absolute
+          top: 50%
+          transform: translateY(calc(-50% + 1px))
+      .phone-number, .fb-like
+        margin-right: 30px
+        img
+          left: -20px
+      .appli
+        margin-right: 60px
+      #img-appli-1
+        right: - 15px
+      #img-appli-2
+        right: - 30px
+
+      button
+        height: 25px
+        vertical-align: middle
+        background-color: rgb(38, 38, 38)
+        border-style: none
+        color: white
+        margin-left: 10px
+        padding-bottom: 10px
+        img
+          transform: translateY(25%)
+
+    nav
+      ul
+        position: absolute
+        left: 50%
+        transform: translateX(calc(-50% + 1px))
+      li
+        display: inline-block
+        padding: 5px 10px
+        font-size: 14px
+        font: "raleway"
+        a
+          text-decoration: none
+          color: black
+        a:hover
+          color: rgb(203, 155, 43)
+
+    #logo, form
+      position: absolute
+    #logo
+      left: 30px
+      top: 70px
+      width: 17%
+      height: auto
+
+    form
+      right: 20px
+      input[type="search"]
+        line-height: 25px
+      button
+        border-style: none
+        position: absolute
+        right: 2px
+        top: 20px
+        background-color: white
+        img
+          height: 20px
+
+
+
+    h1
+      margin: 0
+
+    #burger, #search-header, label
+      display: none

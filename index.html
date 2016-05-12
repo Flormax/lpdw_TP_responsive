@@ -25,12 +25,12 @@
   <section class="header">
     <div class="topbar">
       <div class="topbar-left">
-        <p class ="inscription-salon"> Vous gérez un salon?  </p><button>Inscrivez-vous <img src="assets/img/build/prestalink.svg"/></button>
+        <p class ="inscription-salon"> Vous gérez un salon?  <div class="button-wrapper"><button>Inscrivez-vous <img src="assets/img/build/picto_arrow_white.svg"/></button></div></p>
       </div>
       <div class="topbar-right">
-        <p class="phone-numer"> <img class="topbar-icon" src="assets/img/build/phone.svg"/> 0 811 881 076 </p>
+        <p class="phone-number"> <img src="assets/img/build/phone.svg"/> 0 811 881 076 </p>
         <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="50" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-        <p class="appli"> Télécharger l'appli <img class="topbar-icon" src="assets/img/build/smartphone.jpg"/><img class="topbar-icon" src="assets/img/build/playstore.jpg"/></p>
+        <p class="appli"> Télécharger l'appli <img id="img-appli-1" src="assets/img/build/smartphone.jpg"/><img id="img-appli-2" src="assets/img/build/playstore.jpg"/></p>
         <p class="connect"> Me connecter </p>
       </div>
     </div>
@@ -38,23 +38,26 @@
     <nav>
       <img id="burger" class="nav-icon" src="assets/img/build/burger.svg"/>
       <ul id="navbar">
-        <li>BEAUTE</li>
-        <li>COIFFURE</li>
-        <li>MASSAGE&SPA</li>
-        <li>FORME&MINCEUR</li>
+        <li><a href="">BEAUT&Eacute;</a></li>
+        <li><a href="">COIFFURE</a></li>
+        <li><a href="">MASSAGE&SPA</a></li>
+        <li><a href="">FORME&MINCEUR</a></li>
       </ul>
     </nav>
     <h1>
       <picture>
-        <source id="logo" srcset="assets/img/build/logo-big.png" media="(min-width: 768px)"/>
-        <img id="logo" src="assets/img/build/logo.png" alt="logo"/>
+        <source id="logo" srcset="assets/img/build/logo.png" media="(max-width: 768px)"/>
+        <div class="logo-container">
+          <img id="logo" src="assets/img/build/logo-big.png" alt="logo"/>
+        </div>
       </picture>
     </h1>
     <form id="search-form" method="post" action="">
       <p>
-        <label for="header-search"><img src="assets/img/build/search2.svg" alt="recherche"></label>
+        <label for="header-search">search</label>
         <input type="search" id="header-search"/>
-        <input type="submit" value="Go">
+        <button class="small-screen" type="submit">GO</button>
+        <button class="large-screen" type="submit"><img src="assets/img/build/search.svg"/></button>
       </p>
     </form>
 
@@ -67,13 +70,13 @@
           <source srcset="assets/img/build/banner-big.png" media="(min-width: 768px)"/>
           <img src="assets/img/build/banner.png" alt="banner"/>
         </picture>
-        <figcaption id="mobileBanCaption">
-          Réservez instantanément dans<br/> les meilleurs salons de coiffure,<br/>
-          instituts de beauté et Spas,<br/> jusqu’à -50%
+        <figcaption class="small-screen">
+          <p>Réservez instantanément dans les meilleurs salons de coiffure,
+          instituts de beauté et Spas, jusqu’à -50%</p>
         </figcaption>
-        <figcaption id="desktopBanCaption">
-          Réservez instantanément dans<br/> les meilleurs salons de coiffure,<br/>
-          instituts de beauté et Spas,<br/> jusqu’à -50%
+        <figcaption class="large-screen">
+          <p><span>Prenez le temps de prendre <span>soin de vous</span></span>
+          <span>Réservez au meilleur prix parmi 2 000 établissements</span></p>
         </figcaption>
       </figure>
     </div>
@@ -81,15 +84,15 @@
       <form method="post" action="traitement.php">
         <p>
           <label for=""><img src="assets/img/build/search2.svg" alt="quoi"></label>
-          <input type="text" placeholder="Que souhaitez-vous réserver ?"/>
+          <input id="resa" type="text" placeholder="Que souhaitez-vous réserver ?"/>
         </p>
         <p>
           <label for=""><img src="assets/img/build/pin.svg" alt="adresse"></label>
-          <input type="text" placeholder="Ville, adresse, code postal, ..."/>
+          <input id="ville" type="text" placeholder="Ville, adresse, code postal, ..."/>
         </p>
         <p>
           <label for=""><img src="assets/img/build/date.svg" alt="date"></label>
-          <input type="number" placeholder="Toutes les dates"/>
+          <input id="date" type="number" placeholder="Toutes les dates"/>
         </p>
         <p>
           <button type="submit" value="rechercher">RECHERCHER</button>
@@ -131,6 +134,18 @@
     </ul>
   </section>
 
+  <section class="pub large-screen" >
+    <p>Ils parlent de <span>nous</span></p>
+    <ul>
+      <li><img src="assets/img/build/elle.png" alt="elle"/></li>
+      <li><img src="assets/img/build/express.png" alt="l'express"/></li>
+      <li><img src="assets/img/build/rtl.png" alt="rtl"/></li>
+      <li><img src="assets/img/build/grazia.png" alt="grazia"/></li>
+      <li><img src="assets/img/build/echos.png" alt="les echos"/></li>
+      <li><img src="assets/img/build/avis.png" alt="avis"/></li>
+    </ul>
+  </section>
+
   <section class="prestations">
     <p>
       Les prestations que <span>vous</span> réservez le plus
@@ -138,7 +153,7 @@
     <a href="">
       <figure>
         <picture>
-          <source srcset="assets/img/build/presta1-big.jpg" media="(min-width: 980px)" alt="massage dès 39€"/>
+          <source srcset="assets/img/build/presta1-big.jpg" media="(min-width: 1024px)" alt="massage dès 39€"/>
           <img src="assets/img/build/presta1.png" alt="massage 39€"/>
         </picture>
         <figcaption>
@@ -146,42 +161,46 @@
         </figcaption>
       </figure>
     </a>
+    <div class="droite-gauche-container">
+      <div id="gauche">
+        <a href="">
+          <figure>
+            <picture>
+              <source srcset="assets/img/build/presta2-big.jpg" media="(min-width: 980px)" alt="soins du visage dès 39€"/>
+              <img src="assets/img/build/presta2.png" alt="soins du visage dès 39€"/>
+            </picture>
+            <figcaption>
+              Soins du visage <span>dès 39€</span>
+            </figcaption>
+          </figure>
+        </a>
 
-    <a href="">
-      <figure>
-        <picture>
-          <source srcset="assets/img/build/presta2-big.jpg" media="(min-width: 980px)" alt="soins du visage dès 39€"/>
-          <img src="assets/img/build/presta2.png" alt="soins du visage dès 39€"/>
-        </picture>
-        <figcaption>
-          Soins du visage <span>dès 39€</span>
-        </figcaption>
-      </figure>
-    </a>
-
-    <a href="">
-      <figure>
-        <picture>
-          <source srcset="assets/img/build/presta3-big.jpg" media="(min-width: 980px)" alt="épilation dès 39€"/>
-          <img src="assets/img/build/presta3.png" alt="épilation dès 39€"/>
-        </picture>
-        <figcaption>
-          Epilation <span>dès 39€</span>
-        </figcaption>
-      </figure>
-    </a>
-
-    <a href="">
-      <figure>
-        <picture>
-          <source srcset="assets/img/build/presta4-big.jpg" media="(min-width: 980px)" alt="Coiffure dès 39€"/>
-          <img src="assets/img/build/presta4.png" alt="coiffure dès 39€"/>
-        </picture>
-        <figcaption>
-          Coiffure <span>dès 39€</span>
-        </figcaption>
-      </figure>
-    </a>
+        <a href="">
+          <figure>
+            <picture>
+              <source srcset="assets/img/build/presta3-big.jpg" media="(min-width: 980px)" alt="épilation dès 39€"/>
+              <img src="assets/img/build/presta3.png" alt="épilation dès 39€"/>
+            </picture>
+            <figcaption>
+              Epilation <span>dès 39€</span>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+      <div id="droite">
+        <a href="">
+          <figure>
+            <picture>
+              <source srcset="assets/img/build/presta4-big.jpg" media="(min-width: 980px)" alt="Coiffure dès 39€"/>
+              <img src="assets/img/build/presta4.png" alt="coiffure dès 39€"/>
+            </picture>
+            <figcaption>
+              Coiffure <span>dès 39€</span>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+    </div>
 
     <a href="">
       <figure>
@@ -195,7 +214,7 @@
       </figure>
     </a>
 
-    <a href="">Voir toutes les prestations <img src="assets/img/build/prestalink.svg"/></a>
+    <a href="">Voir toutes les prestations <img src="assets/img/build/picto_arrow_black.svg"/></a>
   </section>
 
   <section class="footer">
