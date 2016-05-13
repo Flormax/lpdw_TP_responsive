@@ -13,7 +13,6 @@
   .prestations
     clear: both
 
-
     figure
       margin: 0
       img
@@ -25,12 +24,14 @@
     figcaption
       margin-left: 5px
 
-    a:nth-child(4)
+    #presta3
       figcaption
         margin-left: 0
+      figure
+        padding-left: 5px
 
 
-    a:nth-child(4), a:nth-child(3)
+    #presta2, #presta3
       figure
         width: 50%
         float: left
@@ -39,11 +40,11 @@
       color: rgb(38, 38, 38)
 
 
-    a:nth-child(3)
+    #presta2
       figure
-        padding-right: 10px
+        padding-right: 5px
 
-    a:last-child
+    #all-presta
       display: inline-block
       border-width: 1px
       border-style: solid
@@ -96,51 +97,87 @@
       figcaption
         text-align: left
 
-    a:nth-child(2)
+    #presta1
+      display: block
+      width: 82%
+      margin: auto
+      margin-bottom: 10px
+      padding: 0
       figure
-        width: 82%
-        margin: auto
+        margin: 0
+        width: 100%
+        img
+          width: 100%
+
+    .duo
+      float: left
+      width: 40%
+      margin: 0
+      margin-left: 9%
+      height: 100%
+
+    #presta2, #presta3
+      width: 100%
+      display: block
+      figure
+        width: 100%
+        margin: 0
         padding: 0
         img
           width: 100%
 
-    .droite-gauche-container
-
-    #gauche, #droite
-      width: 40%
-
-    #gauche
-      float: left
-      margin: 0
-      margin-left: 9%
-      a:first-child
-        clear: both
-
-      a
-        display: block
-        width: 100%
-        figure
-          width: 100%
-          margin: 0
-          padding: 0
-          img
-            width: 100%
-
-    #droite
+    #presta4
       float: right
-      margin: 0
+      width: 40%
+      margin: auto
       margin-right: 9%
-      a
-        display: block
+      figure
         width: 100%
-        figure
+        margin: 0
+        padding: 0
+        img
           width: 100%
-          margin: 0
-          padding: 0
-          padding: 0
-          img
-            width: 100%
-          figcaption
-            clear: both
-    #droite::after
+
+    #presta5
+      float: left
+      width: 51%
+      margin: auto
+      margin-left: 9%
+      figure
+        width: 100%
+        margin: 0
+        padding: 0
+        img
+          width: 100%
+
+    #presta6
+      float: right
+      width: 31%
+      margin: auto
+      margin-right: 9%
+      figure
+        width: 100%
+        margin: 0
+        padding: 0
+        img
+          width: 100%
+
+    #all-presta
+      display: inline-block
+      border-width: 1px
+      border-style: solid
+      padding: 15px
+      margin-top: 15px
+      width: calc(100% - 20px)
+      text-align: center
       clear: both
+      position: relative
+      margin-left: 10px
+      margin-right: 10px
+      margin-bottom: 17px
+      img
+        width: 15px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 7.8%
