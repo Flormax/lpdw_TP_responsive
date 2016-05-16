@@ -25,23 +25,104 @@
   <section class="header">
     <div class="topbar">
       <div class="topbar-left">
-        <p class ="inscription-salon"> Vous gérez un salon?  <div class="button-wrapper"><button>Inscrivez-vous <img src="assets/img/build/picto_arrow_white.svg"/></button></div></p>
+        <p class ="inscription-salon">Vous gérez un salon?  <div class="button-wrapper"><button>Inscrivez-vous <img src="assets/img/build/picto_arrow_white.svg"/></button></div></p>
       </div>
       <div class="topbar-right">
         <p class="phone-number"> <img src="assets/img/build/phone.svg"/> 0 811 881 076 </p>
         <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="50" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-        <p class="appli"> Télécharger l'appli <img id="img-appli-1" src="assets/img/build/smartphone.jpg"/><img id="img-appli-2" src="assets/img/build/playstore.jpg"/></p>
-        <p class="connect"> Me connecter </p>
+        <p class="appli"> Télécharger l'appli <a href="#"><img id="img-appli-1" src="assets/img/build/smartphone.png"/></a><a href="#"><img id="img-appli-2" src="assets/img/build/playstore.png"/></a></p>
+        <p class="connect"> <a href="#">Me connecter</a> </p>
       </div>
     </div>
     <img id="search-header" class="nav-icon" src="assets/img/build/search.svg"/>
     <nav>
       <img id="burger" class="nav-icon" src="assets/img/build/burger.svg"/>
       <ul id="navbar">
-        <li><a href="">BEAUT&Eacute;</a></li>
-        <li><a href="">COIFFURE</a></li>
-        <li><a href="">MASSAGE&SPA</a></li>
-        <li><a href="">FORME&MINCEUR</a></li>
+        <li>
+          <button id="drop-btn-beaute" class="dropbtn">BEAUT&Eacute;</button>
+        </li>
+        <div id="drop-content-beaute" class="dropdown-content">
+          <div>
+            <p class="gold">Soins des pieds</p>
+            <ul>
+              <li><a href="#">Beauté des pieds</a></li>
+              <li><a href="#">Fish Spa</a></li>
+              <li><a href="#">>Voir tout</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="gold">&Eacute;pilation</p>
+            <ul>
+              <li><a href="#">Deux zones ou plus</a></li>
+              <li><a href="#">&Eacute;pilation maillot</a></li>
+              <li><a href="#">&Eacute;pilation visage</a></li>
+              <li><a href="#">>Voir tout</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="gold">Soins du visage</p>
+            <ul>
+              <li><a href="#">Gommage visage</a></li>
+              <li><a href="#">Peeling</a></li>
+              <li><a href="#">Soin hydratant</a></li>
+              <li><a href="#">>Voir tout</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="gold">Relooking</p>
+            <ul>
+              <li><a href="#">Relooking complet</a></li>
+              <li><a href="#">Relooking vestimentaire</a></li>
+              <li><a href="#">>Voir tout</a></li>
+            </ul>
+          </div>
+          <div>
+          <p class="gold">Maquillage</p>
+          <ul>
+            <li><a href="#">Cours de maquillage</a></li>
+            <li><a href="#">Maquillage permanent</a></li>
+            <li><a href="#">Maquillage soir</a></li>
+            <li><a href="#">>Voir tout</a></li>
+          </ul>
+          </div>
+          <div>
+            <p class="gold">Soins pour homme</p>
+            <ul>
+              <li><a href="#">&Eacute;pilation homme</a></li>
+              <li><a href="#">Soins homme</a></li>
+              <li><a href="#">>Voir tout</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="gold">Soins des mains</p>
+            <ul>
+              <li><a href="#">Manucure</a></li>
+              <li><a href="#">Pose de vernis</a></li>
+              <li><a href="#">>Voir tout</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="gold">Autres</p>
+            <ul>
+              <li><a href="#">Bronzage</a></li>
+              <li><a href="#">Shooting photo</a></li>
+              <li><a href="#">>Voir tout</a></li>
+            </ul>
+          </div>
+          <button>Tout nos bons plans beauté <img src="assets\img\build\picto_arrow_white.svg"/></button>
+        </div>
+        <li>
+          <button id="drop-btn-coiffure" class="dropbtn">COIFFURE</button>
+        </li>
+        <div id="drop-content-coiffure" class="dropdown-content"></div>
+        <li>
+            <button id="drop-btn-massagespa" class="dropbtn">MASSAGE&amp;SPA</button>
+        </li>
+        <div id="drop-content-massagespa" class="dropdown-content"></div>
+        <li>
+            <button id="drop-btn-formeminceur" class="dropbtn">FORME&amp;MINCEUR</button>
+        </li>
+        <div id="drop-content-formeminceur" class="dropdown-content"></div>
       </ul>
     </nav>
     <h1>
@@ -67,7 +148,8 @@
     <div class="banner">
       <figure>
         <picture>
-          <source srcset="assets/img/build/banner-big.png" media="(min-width: 768px)"/>
+          <source srcset="assets/img/build/banner-big.png" media="((min-width: 768px) and (max-width: 1023px)"/>
+          <source srcset="assets/img/build/banner-big-partial.png" media="(min-width: 1024px)"/>
           <img src="assets/img/build/banner.png" alt="banner"/>
         </picture>
         <figcaption class="small-screen">
@@ -221,7 +303,13 @@
       </figure>
     </a>
 
-    <a id="all-presta" href="">Voir toutes les prestations <img src="assets/img/build/picto_arrow_black.svg"/></a>
+    <a id="all-presta" href="">
+      Voir toutes les prestations
+      <picture>
+        <source srcset="assets/img/build/picto_arrow_white.svg" media="(min-width: 1024px)"/>
+        <img src="assets/img/build/picto_arrow_black.svg"/>
+      </picture>
+    </a>
   </section>
 
   <section class="resa-city large-screen">
@@ -249,38 +337,97 @@
     </ul>
   </section>
 
-  <section class="about">
-    <p><span class="gold">Numéro 1</span> de la réservation beauté et bien être</p>
-     <p><span class="big-letter">B</span>eautyspan.com est le site numéro 1 pour réserver en ligne vos soins bien-être et beauté de paris et ses environs.
-     Les massages, ou modelages, proposés par les partenaires de Beautyspa.com sont des massages esthétiques de relaxation et de bien être, sans finalité thérapeutique.
-     Découvrez les bons plans de nos institus partenaires séléctionnés avec attention, et choisissez l'offre qui vous correspond</p>
+  <section class="about large-screen">
+    <p><span class="gold">Numéro 1</span> de la réservation beauté 	&amp; bien être</p>
+    <div class="image-container">
+      <img id="logo2" src="assets/img/build/logo-big.png" alt="logo"/>
+      <img id="award" src="assets/img/build/beautyaward.png" alt="logo"/>
+    </div>
+    <p><span class="big-letter">B</span>eautyspa.com est le site numéro 1 pour réserver en ligne vos soins bien-être et beauté de paris et ses environs.
+    Les massages, ou modelages, proposés par les partenaires de Beautyspa.com sont des massages esthétiques de relaxation et de bien être, sans finalité thérapeutique.
+    Découvrez les bons plans de nos institus partenaires séléctionnés avec attention, et choisissez l'offre qui vous correspond.</p>
+    <p>Beautyspa.com est le site numéro 1 pour réserver en ligne vos soins bien-être et beauté de paris et ses environs.
+    Les massages, ou modelages, ou pâte à modeler, proposés par les partenaires de Beautyspa.com sont des massages esthétiques de relaxation et de bien être, sans finalité thérapeutique.
+    Découvrez les bons plans de nos institus partenaires séléctionnés avec attention, et choisissez l'offre qui vous correspond.</p>
   </section>
 
   <section class="footer">
-    <span>#beautyspaetvous</span>
-    <ul>
-      <li>
-        <a href=""><img src="assets/img/build/facebook.svg"></a>
-      </li>
-      <li>
-        <a href=""><img src="assets/img/build/twitter.svg"></a>
-      </li>
-      <li>
-        <a href=""><img src="assets/img/build/instagram.svg"></a>
-      </li>
-      <li>
-        <a href=""><img src="assets/img/build/google+.svg"></a>
-      </li>
-      <li>
-        <a href=""><img src="assets/img/build/youtube.svg"></a>
-      </li>
-    </ul>
-    <hr/>
-    <p>@ Copyright 2014 Beautyspa. Tous droits réservés.</p>
+    <div class="footer-left large-screen">
+      <div>
+        <p class="gold">Beautyspa</p>
+        <ul>
+          <li><a href="">&Agrave; propos</a></li>
+          <li><a href="">Devenir partenaire</a></li>
+          <li><a href="">On parle de nous</a></li>
+          <li><a href="">Questions fréquentes</a></li>
+          <li><a href="">Recrutement</a></li>
+          <li><a href="">Contactez-nous</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="gold">Accès rapide</p>
+        <ul>
+          <li><a href="">Massages Paris</a></li>
+          <li><a href="">Spa Paris</a></li>
+          <li><a href="">Coiffure Paris</a></li>
+          <li><a href="">&Eacute;pilation Paris</a></li>
+          <li><a href="">Aquabike Paris</a></li>
+          <li><a href="">Manucure Paris</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Massages Bordeaux</a></li>
+          <li><a href="">Spa Bordeaux</a></li>
+          <li><a href="">Coiffure Bordeaux</a></li>
+          <li><a href="">&Eacute;pilation Bordeaux</a></li>
+          <li><a href="">Aquabike Bordeaux</a></li>
+          <li><a href="">Manucure Bordeaux</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="gold">#beautyspaetvous</p>
+      <ul>
+        <li>
+          <a href=""><img src="assets/img/build/facebook.svg"></a>
+        </li>
+        <li>
+          <a href=""><img src="assets/img/build/twitter.svg"></a>
+        </li>
+        <li>
+          <a href=""><img src="assets/img/build/instagram.svg"></a>
+        </li>
+        <li>
+          <a href=""><img src="assets/img/build/google+.svg"></a>
+        </li>
+        <li>
+          <a href=""><img src="assets/img/build/youtube.svg"></a>
+        </li>
+      </ul>
+      <div class="large-screen">
+        <p class="gold">Beautyspa dans la poche</p>
+        <ul class="app-list">
+          <li>
+            <a href=""><img src="assets/img/build/appstore.png"></a>
+          </li>
+          <li>
+            <a href=""><img src="assets/img/build/googleplay.png"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="small-screen"/>
+    <div class="footer-bottom">
+      <p>@ Copyright 2014 Beautyspa. Tous droits réservés.</p>
+      <p class="large-screen">
+        Tout nos paiements sont sécurisés
+        <a href=""><img src="assets/img/build/paiements2.png"></a>
+        <a href=""><img src="assets/img/build/paiements1.png"></a>
+      </p>
+      <p class="large-screen">
+        <a href="">Partenaires</a> . <a href="">Mentions légales</a>
+      </p>
+    </div>
   </section>
-
-  <script src="http://192.168.1.183:35729/livereload.js"></script>
   <script src="index.js"></script>
 </body>
-
 </html>

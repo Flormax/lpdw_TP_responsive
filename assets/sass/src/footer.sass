@@ -1,43 +1,128 @@
 .footer
-  font-size: 1em
-
-  span
-    color: rgb(203, 155, 43)
-    font-size: 1em
-    font-family: "raleway-extralight"
-    font-style: normal
-    width: 100%
-    display: inline-block
-    text-align: center
-    padding: 40px
-
   ul
-    margin: 0
-    padding: 0
-    text-align: center
-    width: 100%
-    li
-      display: inline
-      margin-left: 17px
-      margin-right: 17px
+    list-style: none
+  .footer-right
+    ul
+      margin: 0
+      padding: 0
+      text-align: center
       img
         height: 21px
 
-  hr
-    border: 0
-    color: rgb(228, 227, 226)
-    background-color: rgb(228, 227, 226)
-    height: 1px
-    width: 100%
-    text-align: left
-    margin-top: 40px
+@media screen and (max-width: 1023px)
+  .footer
+    font-size: 1em
 
-  p
-    font-family: 'raleway'
-    font-size: 0.46875em
-    font-style: normal
-    color: rgb(153, 153, 153)
-    display: block
-    width: 100%
-    text-align: center
-    padding: 25px
+    .footer-right
+      ul
+        width: 100%
+        li
+          display: inline
+          margin-left: 17px
+          margin-right: 17px
+    span
+      color: rgb(203, 155, 43)
+      font-size: 1em
+      font-family: "raleway-extralight"
+      font-style: normal
+      width: 100%
+      display: inline-block
+      text-align: center
+      padding: 40px
+
+    hr
+      border: 0
+      color: rgb(228, 227, 226)
+      background-color: rgb(228, 227, 226)
+      height: 1px
+      width: 100%
+      text-align: left
+      margin-top: 40px
+
+    p
+      font-family: 'raleway'
+      font-size: 0.46875em
+      font-style: normal
+      color: rgb(153, 153, 153)
+      width: 100%
+      text-align: center
+      padding: 25px
+
+@media screen and (min-width: 1024px)
+  .footer
+    p
+      font-size: 1.4em
+    background-color: rgb(247,247,247)
+    div, ul
+      display: inline-block
+      padding: 0
+      margin: 0
+    .footer-left
+      ul
+        font-size: 0.85em
+      li
+        line-height: 20px
+      a:hover
+        color: rgb(203, 155, 43)
+      font-family: "raleway"
+      width: 50%
+      margin-left: 9%
+      div:nth-child(2)
+        padding-left: 9%
+        ul:nth-child(3)
+          padding-left: 80px
+
+    .footer-right
+      .large-screen
+        img
+          height: 40px
+      float: right
+      margin-right: 9%
+      p, ul
+        font-family: "raleway-extralight"
+        margin-bottom: 10px
+      li
+        display: inline-block
+        margin: 10px 20px 0 0
+      ul
+        text-align: left
+        display: block
+        margin: auto
+        margin-left: 0
+      .app-list
+        li
+          margin-right: 0
+          padding: 0
+
+    .footer-bottom
+      padding-bottom: 10px
+      padding-top: 110px
+      width: 100%
+      position: relative
+      p
+        position: absolute
+        font-size: 0.80em
+        bottom: 0
+
+      p:first-child
+        left: 10px
+
+      p:nth-child(2)
+        left: 50%
+        transform: translateX(-50%)
+        img
+          position: absolute
+          top: 50%
+          right: 0
+          transform: translateY(-50%)
+        a:first-child
+          img
+            transform: translate3d(120%, -50%, 0)
+        a:nth-child(2)
+          img
+            transform: translate3d(190%, -50%, 0)
+
+      p:nth-child(3)
+        right: 10px
+        a:hover
+          color: rgb(203, 155, 43)

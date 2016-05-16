@@ -1,0 +1,93 @@
+@media screen and (max-width: 1023px)
+  .header
+
+
+@media screen and (min-width: 1024px)
+  .header
+    nav
+      button:focus, button:active
+        outline: none
+        background-color: rgba(0,0,0,0.05)
+        border-radius: 10px
+
+      .dropbtn
+        background-color: rgba(0,0,0,0)
+        color: black
+        font-size: 1.1em
+        font-family: "raleway"
+        border: none
+        cursor: pointer
+        padding: 5px
+
+      .dropbtn:hover
+        color: rgb(203, 155, 43)
+
+      .dropdown
+        display: inline-block
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content
+        border: solid 1px rgb(200,200,200)
+        padding: 10px 30px
+        display: none
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        background-color: #f9f9f9
+        width: 760px
+        max-height: 500px
+
+        div
+          font-family: "raleway-light"
+          display: inline-block
+          width: 22%
+          vertical-align: top
+          margin: 10px 8px
+        p
+          font-size: 1.1em
+        p, li
+          text-align: left
+        ul, li, a
+          position: relative
+          margin: 0
+          padding: 0
+          font-size: 13px
+        li
+          display: block
+          margin: 5px 0
+        li:last-child
+          a
+            font-family: arial
+            text-decoration: underline
+            margin-top: 10px
+        button
+          background-color: rgb(38,38,38)
+          color: white
+          width: 40%
+          font-family: "raleway"
+          font-size: 0.8em
+          padding: 15px
+          margin-top: 20px
+          margin-bottom: 20px
+          border: none
+
+          img
+            vertical-align: middle
+            height: 15px
+            padding-left: 20%
+        button:hover
+          background-color: rgb(50,50,50)
+
+      /* Links inside the dropdown */
+      .dropdown-content a
+        color: black
+        text-decoration: none
+        display: block
+
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover
+        color: rgb(203, 155, 43)
+
+      /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+      .show
+        display: block
