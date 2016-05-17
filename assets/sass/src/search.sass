@@ -99,20 +99,26 @@
     .search-form input
       font-size: 1.0em
 
-@media screen and (min-width: 1024px)
-  .search
+.search
+  @media screen and (min-width: 1024px) and (max-width: 1279px)
+    .banner
+      figcaption
+        left: 60%
+  @media screen and (min-width: 1280px)
+    .banner
+      figcaption
+        left: 50%
+  @media screen and (min-width: 1024px)
     .banner
       background-color: rgb(255,239,223)
       width: 100%
       img
         min-height: calc(100vh - 45px)
         width: auto
-
       figcaption
         width: 60%
         position: absolute
         top: 50%
-        left: 50%
         transform: translate3d(-50%, calc(-50% - 132px), 0)
         text-align: center
         font-family: "raleway"
@@ -126,6 +132,7 @@
             font-family: "raleway-bold"
         span:nth-child(2)
           line-height: 100px
+
     .search-form
       position: relative
       form
@@ -145,15 +152,12 @@
           width: 240px
         p:nth-child(3), #date
           width: 200px
+
       p
         display: inline
         margin: 0
         padding: 0
         font-size: 0.9em
-        -webkit-margin-before: 0px
-        -webkit-margin-after: 0px
-
-
 
       button
         height: 60px
