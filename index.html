@@ -43,7 +43,7 @@
         </li>
         <div id="drop-content-beaute" class="dropdown-content">
           <div>
-            <p class="gold">Soins des pieds</p>
+            <p><a href="#">Soins des pieds</a></p>
             <ul>
               <li><a href="#">Beauté des pieds</a></li>
               <li><a href="#">Fish Spa</a></li>
@@ -51,7 +51,7 @@
             </ul>
           </div>
           <div>
-            <p class="gold">&Eacute;pilation</p>
+            <p class="gold"><a href="#">&Eacute;pilation</a></p>
             <ul>
               <li><a href="#">Deux zones ou plus</a></li>
               <li><a href="#">&Eacute;pilation maillot</a></li>
@@ -60,7 +60,7 @@
             </ul>
           </div>
           <div>
-            <p class="gold">Soins du visage</p>
+            <p class="gold"><a href="#">Soins du visage</a></p>
             <ul>
               <li><a href="#">Gommage visage</a></li>
               <li><a href="#">Peeling</a></li>
@@ -69,7 +69,7 @@
             </ul>
           </div>
           <div>
-            <p class="gold">Relooking</p>
+            <p class="gold"><a href="#">Relooking</a></p>
             <ul>
               <li><a href="#">Relooking complet</a></li>
               <li><a href="#">Relooking vestimentaire</a></li>
@@ -77,7 +77,7 @@
             </ul>
           </div>
           <div>
-          <p class="gold">Maquillage</p>
+          <p class="gold"><a href="#">Maquillage</a></p>
           <ul>
             <li><a href="#">Cours de maquillage</a></li>
             <li><a href="#">Maquillage permanent</a></li>
@@ -86,7 +86,7 @@
           </ul>
           </div>
           <div>
-            <p class="gold">Soins pour homme</p>
+            <p class="gold"><a href="#">Soins pour homme</a></p>
             <ul>
               <li><a href="#">&Eacute;pilation homme</a></li>
               <li><a href="#">Soins homme</a></li>
@@ -94,7 +94,7 @@
             </ul>
           </div>
           <div>
-            <p class="gold">Soins des mains</p>
+            <p class="gold"><a href="#">Soins des mains</a></p>
             <ul>
               <li><a href="#">Manucure</a></li>
               <li><a href="#">Pose de vernis</a></li>
@@ -102,14 +102,14 @@
             </ul>
           </div>
           <div>
-            <p class="gold">Autres</p>
+            <p class="gold"><a href="#">Autres</a></p>
             <ul>
               <li><a href="#">Bronzage</a></li>
               <li><a href="#">Shooting photo</a></li>
               <li><a href="#">>Voir tout</a></li>
             </ul>
           </div>
-          <button>Tout nos bons plans beauté <img src="assets\img\build\picto_arrow_white.svg"/></button>
+          <button class="large-screen">Tout nos bons plans beauté <img src="assets\img\build\picto_arrow_white.svg"/></button>
         </div>
         <li>
           <button id="drop-btn-coiffure" class="dropbtn">COIFFURE</button>
@@ -244,64 +244,68 @@
       </figure>
     </a>
 
-    <div class="duo">
-      <a id="presta2" href="">
+    <div class="left-right-container-1">
+      <div class="left">
+        <a id="presta2" href="">
+          <figure>
+            <picture>
+              <source srcset="assets/img/build/presta2-big.jpg" media="(min-width: 1024px)" alt="soins du visage dès 39€"/>
+              <img src="assets/img/build/presta2.jpg" alt="soins du visage dès 39€"/>
+            </picture>
+            <figcaption>
+              Soins du visage <span>dès 39€</span>
+            </figcaption>
+          </figure>
+        </a>
+
+        <a id="presta3" href="">
+          <figure>
+            <picture>
+              <source srcset="assets/img/build/presta3-big.jpg" media="(min-width: 1024px)" alt="épilation dès 39€"/>
+              <img src="assets/img/build/presta3.png" alt="épilation dès 39€"/>
+            </picture>
+            <figcaption>
+              Epilation <span>dès 39€</span>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+      <div class="right">
+        <a id="presta4" href="">
+          <figure>
+            <picture>
+              <source srcset="assets/img/build/presta4-big.jpg" media="(min-width: 1024px)" alt="Coiffure dès 39€"/>
+              <img src="assets/img/build/presta4.png" alt="coiffure dès 39€"/>
+            </picture>
+            <figcaption>
+              Coiffure <span>dès 39€</span>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+    </div>
+    <div class="left-right-container-2">
+      <a id="presta5" href="">
         <figure>
           <picture>
-            <source srcset="assets/img/build/presta2-big.jpg" media="(min-width: 1024px)" alt="soins du visage dès 39€"/>
-            <img src="assets/img/build/presta2.jpg" alt="soins du visage dès 39€"/>
+            <source srcset="assets/img/build/presta5-big.jpg" media="(min-width: 1024px)" alt="spa dès 39€"/>
+            <img src="assets/img/build/presta5.png" alt="spa dès 39€"/>
           </picture>
           <figcaption>
-            Soins du visage <span>dès 39€</span>
+            Spa <span>dès 39€</span>
           </figcaption>
         </figure>
       </a>
 
-      <a id="presta3" href="">
+      <a class="large-screen" id="presta6" href="">
         <figure>
-          <picture>
-            <source srcset="assets/img/build/presta3-big.jpg" media="(min-width: 1024px)" alt="épilation dès 39€"/>
-            <img src="assets/img/build/presta3.png" alt="épilation dès 39€"/>
-          </picture>
+          <img src="assets/img/build/presta6.jpg" alt="soin des mains 39€"/>
           <figcaption>
-            Epilation <span>dès 39€</span>
+            Soins des mains <span>dès 39€</span>
           </figcaption>
         </figure>
       </a>
     </div>
-
-    <a id="presta4" href="">
-      <figure>
-        <picture>
-          <source srcset="assets/img/build/presta4-big.jpg" media="(min-width: 1024px)" alt="Coiffure dès 39€"/>
-          <img src="assets/img/build/presta4.png" alt="coiffure dès 39€"/>
-        </picture>
-        <figcaption>
-          Coiffure <span>dès 39€</span>
-        </figcaption>
-      </figure>
-    </a>
-
-    <a id="presta5" href="">
-      <figure>
-        <picture>
-          <source srcset="assets/img/build/presta5-big.jpg" media="(min-width: 1024px)" alt="spa dès 39€"/>
-          <img src="assets/img/build/presta5.png" alt="spa dès 39€"/>
-        </picture>
-        <figcaption>
-          Spa <span>dès 39€</span>
-        </figcaption>
-      </figure>
-    </a>
-
-    <a class="large-screen" id="presta6" href="">
-      <figure>
-        <img src="assets/img/build/presta6.jpg" alt="soin des mains 39€"/>
-        <figcaption>
-          Soins des mains <span>dès 39€</span>
-        </figcaption>
-      </figure>
-    </a>
 
     <a id="all-presta" href="">
       Voir toutes les prestations
@@ -310,6 +314,80 @@
         <img src="assets/img/build/picto_arrow_black.svg"/>
       </picture>
     </a>
+  </section>
+
+  <section class="comment large-screen">
+    <p class="title">Les derniers avis que <span class="gold">vous</span> avez laissé</p>
+    <div class="slider">
+      <div class="slider-page show" id="page1">
+        <div class="comment-item">
+          <p>Spa Raplui<span>Brest</span></p>
+          <p>Noté par Grincheux <span>Aujourd'hui à 17h30</span></p>
+          <p class="gold">2/10 &#9733;&#9734;&#9734;&#9734;&#9734;</p>
+          <p><span>‘‘</span>J'aime pas les massages, j'aime pas la pluie..</p>
+        </div>
+        <div class="comment-item">
+          <p>Vendôme Spa <span>Paris 75011</span></p>
+          <p>Noté par Georgette <span>Aujourd'hui à 17h30</span></p>
+          <p class="gold">1/10 &#9733;&#9734;&#9734;&#9734;&#9734;</p>
+          <p><span>‘‘</span>Horrible !! Très mal reçue, hygiène laissant à désirée.
+          Et surtout une esthéticienne incompétente, je déconseille.</p>
+        </div>
+        <div class="comment-item">
+          <p>Spa'Bien <span>Paris 75066</span></p>
+          <p>Noté par Jean-Ubert <span>Aujourd'hui à 17h30</span></p>
+          <p class="gold">10/10 &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p><span>‘‘</span>Vraiment bien, très jolies hôtesses. Les massuses pas mal non plus.
+          Je recommande.</p>
+        </div>
+      </div>
+      <div class="slider-page" id="page2">
+        <div class="comment-item">
+          <p>Vendôme Spa <span>Paris 75011</span></p>
+          <p>Noté par Marie-Françoise <span>Aujourd'hui à 17h30</span></p>
+          <p class="gold">6/10 &#9733;&#9733;&#9733;&#9734;&#9734;</p>
+          <p><span>‘‘</span>Epilation complétement ratée mes poils ont repoussé seulement 2 semaines après. Déçue.</p>
+        </div>
+        <div class="comment-item">
+          <p>Spa'Bien <span>Paris 75066</span></p>
+          <p>Noté par Johnny-Haliday <span>Aujourd'hui à 15h12</span></p>
+          <p class="gold">7/10 &#9733;&#9733;&#9733;&#9734;&#9734;</p>
+          <p><span>‘‘</span>Ah que c'était pas mal.</p>
+        </div>
+        <div class="comment-item">
+          <p>Spa-radis <span>Heaven</span></p>
+          <p>Noté par Jean-Pierre Coffe <span>Hier à 19h38</span></p>
+          <p class="gold">0/10 &#9734;&#9734;&#9734;&#9734;&#9734;</p>
+          <p><span>‘‘</span>C'est de la M*R-DE !!</p>
+        </div>
+      </div>
+      <div class="slider-page" id="page3">
+        <div class="comment-item">
+          <p>Vendôme Spa <span>Paris 75011</span></p>
+          <p>Noté par Marie-Françoise <span>Aujourd'hui à 17h30</span></p>
+          <p class="gold">8/10 &#9733;&#9733;&#9733;&#9734;&#9734;</p>
+          <p><span>‘‘</span>Un cadre magnifique où senteur et chaleur se marient parfaitement.
+            Un personnel aux petits soins.</p>
+        </div>
+        <div class="comment-item">
+          <p>Vendôme Spa <span>Paris 75011</span></p>
+          <p>Noté par Georgette <span>Aujourd'hui à 17h30</span></p>
+          <p class="gold">1/10 &#9733;&#9734;&#9734;&#9734;&#9734;</p>
+          <p><span>‘‘</span>Horrible !! Très mal reçue, hygiène laissant à désirée.
+          Et surtout une esthéticienne incompétente, je déconseille.</p>
+        </div>
+        <div class="comment-item">
+          <p>Spa'Bien <span>Paris 75066</span></p>
+          <p>Noté par Jean-Ubert <span>Aujourd'hui à 17h30</span></p>
+          <p class="gold">10/10 &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p><span>‘‘</span>Vraiment bien, très jolies hôtesses. Les massuses pas mal non plus.
+          Je recommande.</p>
+        </div>
+      </div>
+      <div class="slider-command">
+        <ul><li class="activ" id="btn1"></li><li class="unactiv" id="btn2"></li><li class="unactiv" id="btn3"></li></ul>
+      </div>
+    </div>
   </section>
 
   <section class="resa-city large-screen">
@@ -428,6 +506,6 @@
       </p>
     </div>
   </section>
-  <script src="index.js"></script>
+  <script src="index.min.js"></script>
 </body>
 </html>

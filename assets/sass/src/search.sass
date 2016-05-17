@@ -1,7 +1,5 @@
 .search
   .banner
-    font-size: 16px
-
     img
       width: 100%
       display: block
@@ -16,6 +14,7 @@
       border-width: 0
       bor
     label
+      z-index: 9999
       position: absolute
       top: 50%
       transform: translateY(calc(-50% + 1px))
@@ -34,15 +33,12 @@
     input:nth-child(-n+3)
       padding-left: 42px
 
-
-@media screen and (max-width: 1023px)
-  .search
+  @media screen and (max-width: 1023px)
     padding-top: 50px
 
     .banner
       figure
         position: relative
-
       figcaption
         p
           width: 60%
@@ -59,7 +55,6 @@
     .search-form
       input:nth-child(-n+3)
         padding-left: 42px
-
       input
         width: 100%
         height: 50px
@@ -67,20 +62,9 @@
         font-size: 0.875em
         border-style: none
         border-width: 0
-
       button
         width: 100%
         height: 45px
-
-      // input::-webkit-input-placeholder
-      //   margin-left: 50px
-      // input:-moz-placeholder  /* Firefox 18- */
-      //   margin-left: 50px
-      // input::-moz-placeholder   /* Firefox 19+ */
-      //   margin-left: 50px
-      // input:-ms-input-placeholder
-      //   margin-left: 50px
-
       p
         margin: 0
         border-top: solid
@@ -91,29 +75,29 @@
         background-color: rgb(196, 196, 196)
 
   @media screen and (min-width: 768px)
-    .search
-      padding-top: 0
+    padding-top: 0
     .banner figcaption
       font-size: 1.5em
-
     .search-form input
       font-size: 1.0em
 
-.search
   @media screen and (min-width: 1024px) and (max-width: 1279px)
     .banner
       figcaption
         left: 60%
+
   @media screen and (min-width: 1280px)
     .banner
       figcaption
         left: 50%
+
   @media screen and (min-width: 1024px)
     .banner
       background-color: rgb(255,239,223)
       width: 100%
       img
-        min-height: calc(100vh - 45px)
+        height: calc(100vh - 45px)
+        min-height: 620px
         width: auto
       figcaption
         width: 60%
@@ -146,20 +130,32 @@
         input
           height: 60px
           margin: 30px 0
-        p:nth-child(1), #resa
+        #resa
           width: 300px
-        p:nth-child(2), #ville
+        p:nth-child(2)::before, p:nth-child(3)::before
+          z-index: 99999
+          content: ' '
+          height: 30px
+          width: 2px
+          background-color: rgba(38, 38, 38, 0.1)
+          position: absolute
+          left: 0
+          top: -7px
+        #ville
           width: 240px
-        p:nth-child(3), #date
+          transform: translateX(-4px)
+        #date
           width: 200px
-
-      p
-        display: inline
-        margin: 0
-        padding: 0
-        font-size: 0.9em
-
-      button
-        height: 60px
-        width: 180px
-        padding: 15px 35px
+          transform: translateX(-8px)
+        p
+          display: inline
+          margin: 0
+          padding: 0
+          font-size: 0.9em
+        button
+          transform: translateX(-12px)
+          height: 60px
+          width: 180px
+          padding: 15px 35px
+        label
+          left: 13px

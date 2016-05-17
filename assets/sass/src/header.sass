@@ -5,11 +5,7 @@ $icon-width: 23.6px
   z-index: 10
   position: relative
 
-@media screen and (max-width: 1023px)
-  .topbar
-    display: none
-
-  .header
+  @media screen and (max-width: 1023px)
     background-color: white
     position: fixed
     z-index: 1
@@ -29,23 +25,13 @@ $icon-width: 23.6px
       text-align: center
       margin: 0
 
-    ul
+    ul, form
       visibility: hidden
+      list-style: none
       height: 0
       width: 0
       padding: 0
       margin: 0
-      li
-        border-top: solid
-        border-top-width: 1px
-        border-color: rgb(228, 227, 226)
-        list-style-type: none
-        height: 40px
-        padding: 10px
-        font-family: "raleway"
-        font-style: normal
-      li:hover
-        background-color: rgba(203, 154, 51, 0.5)
 
     ul.visible, form.visible
       visibility: visible
@@ -54,10 +40,10 @@ $icon-width: 23.6px
       float: left
       text-align: center
 
+    ul
+      list-style: none
+
     form
-      visibility: hidden
-      height: 0
-      width: 0
       input
         width: 100%
         padding: 10px
@@ -104,12 +90,15 @@ $icon-width: 23.6px
     #search-header
       float: right
 
-@media screen and (min-width: 768px)
-  .header #logo
-    width: 173px
-    height: 29px
+    .topbar
+      display: none
 
-.header
+  @media screen and (min-width: 768px)
+    #logo
+      width: 173px
+      height: 29px
+
+
   @media screen and (min-width: 1024px) and (max-width: 1279px)
     nav
       ul
@@ -119,14 +108,13 @@ $icon-width: 23.6px
       width: 8%
 
   @media screen and (min-width: 1280px)
-    form
-      width: 16%
     nav
       ul
         width: 100%
+    form
+      width: 16%
 
-@media screen and (min-width: 1024px)
-  .header
+  @media screen and (min-width: 1024px)
     .topbar
       height: 45px
       background-color: rgb(247, 247, 247)
@@ -142,6 +130,7 @@ $icon-width: 23.6px
         margin: 0
         padding: 0
         display: inline-block
+
       p
         line-height: 45px
 
@@ -189,11 +178,10 @@ $icon-width: 23.6px
         padding: 15px 20px
         font-size: 14px
         font: "raleway"
-        a
-          text-decoration: none
 
     #logo, form
       position: absolute
+
     #logo
       left: 2%
       top: 150%
@@ -216,7 +204,6 @@ $icon-width: 23.6px
         background-color: white
         img
           height: 20px
-
 
     h1
       margin: 0

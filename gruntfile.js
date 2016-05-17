@@ -37,6 +37,13 @@ module.exports = function(grunt) {
         }]
       }
     },
+    uglify: {
+      my_target: {
+        files: {
+          'index.min.js': ['index.js']
+        }
+      }
+    },
     watch: {
       sass:{
         files: ['assets/sass/src/*.sass'],
@@ -44,10 +51,18 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         }
+      },
+      scripts: {
+        files: ['index.js'],
+        tasks: ['uglify'],
+        options: {
+          livereload: true
+        }
       }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');

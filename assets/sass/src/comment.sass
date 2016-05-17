@@ -1,5 +1,6 @@
 .comment
   clear: both
+  height: 400px
   .slider
     margin: auto
     padding-left: 50px
@@ -58,9 +59,13 @@
     top: 63px
   .slider-page
     display: none
+    width: 0
     text-align: center
-  .show
+    transition: width 2s
+  .slider-page.show
     display: block
+    width: 950px
+    margin: auto
 
 
   .slider-command
