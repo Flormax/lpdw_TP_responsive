@@ -25,7 +25,7 @@
   <section class="header">
     <div class="topbar">
       <div class="topbar-left">
-        <p class ="inscription-salon">Vous gérez un salon?  <div class="button-wrapper"><button>Inscrivez-vous <img src="assets/img/build/picto_arrow_white.svg"/></button></div></p>
+        <p class ="inscription-salon">Vous gérez un salon?  <div class="button-wrapper"><a href="#"><button>Inscrivez-vous <img src="assets/img/build/picto_arrow_white.svg"/></button></a></div></p>
       </div>
       <div class="topbar-right">
         <p class="phone-number"> <img src="assets/img/build/phone.svg"/> 0 811 881 076 </p>
@@ -232,21 +232,22 @@
     <p>
       Les prestations que <span>vous</span> réservez le plus
     </p>
-    <a id="presta1" href="">
-      <figure>
-        <picture>
-          <source srcset="assets/img/build/presta1-big.jpg" media="(min-width: 1024px)" alt="massage dès 39€"/>
-          <img src="assets/img/build/presta1.png" alt="massage 39€"/>
-        </picture>
-        <figcaption>
-          Massage <span>dès 39€</span>
-        </figcaption>
-      </figure>
-    </a>
-
-    <div class="left-right-container-1">
-      <div class="left">
-        <a id="presta2" href="">
+    <div id="grid1" class="grid">
+      <a href="" id="item1" class="item">
+        <figure>
+          <picture>
+            <source srcset="assets/img/build/presta1-big.jpg" media="(min-width: 1024px)" alt="massage dès 39€"/>
+            <img src="assets/img/build/presta1.png" alt="massage 39€"/>
+          </picture>
+          <figcaption>
+            Massage <span>dès 39€</span>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+    <div id="grid2" class="grid">
+      <div class="grid">
+        <a href="" id="item2" class="item">
           <figure>
             <picture>
               <source srcset="assets/img/build/presta2-big.jpg" media="(min-width: 1024px)" alt="soins du visage dès 39€"/>
@@ -257,8 +258,7 @@
             </figcaption>
           </figure>
         </a>
-
-        <a id="presta3" href="">
+        <a href="" id="item3" class="item">
           <figure>
             <picture>
               <source srcset="assets/img/build/presta3-big.jpg" media="(min-width: 1024px)" alt="épilation dès 39€"/>
@@ -270,34 +270,33 @@
           </figure>
         </a>
       </div>
-      <div class="right">
-        <a id="presta4" href="">
+      <a href="" id="item4" class="item">
+        <figure>
+          <picture>
+            <source srcset="assets/img/build/presta4-big.jpg" media="(min-width: 1024px)" alt="Coiffure dès 39€"/>
+            <img src="assets/img/build/presta4.png" alt="coiffure dès 39€"/>
+          </picture>
+          <figcaption>
+            Coiffure <span>dès 39€</span>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+    <div id="grid3" class="grid">
+      <div class="grid">
+        <a href="" id="item5" class="item">
           <figure>
             <picture>
-              <source srcset="assets/img/build/presta4-big.jpg" media="(min-width: 1024px)" alt="Coiffure dès 39€"/>
-              <img src="assets/img/build/presta4.png" alt="coiffure dès 39€"/>
+              <source srcset="assets/img/build/presta5-big.jpg" media="(min-width: 1024px)" alt="spa dès 39€"/>
+              <img src="assets/img/build/presta5.png" alt="spa dès 39€"/>
             </picture>
             <figcaption>
-              Coiffure <span>dès 39€</span>
+              Spa <span>dès 39€</span>
             </figcaption>
           </figure>
         </a>
       </div>
-    </div>
-    <div class="left-right-container-2">
-      <a id="presta5" href="">
-        <figure>
-          <picture>
-            <source srcset="assets/img/build/presta5-big.jpg" media="(min-width: 1024px)" alt="spa dès 39€"/>
-            <img src="assets/img/build/presta5.png" alt="spa dès 39€"/>
-          </picture>
-          <figcaption>
-            Spa <span>dès 39€</span>
-          </figcaption>
-        </figure>
-      </a>
-
-      <a class="large-screen" id="presta6" href="">
+      <a href="" id="item6" class="item large-screen">
         <figure>
           <img src="assets/img/build/presta6.jpg" alt="soin des mains 39€"/>
           <figcaption>
@@ -306,13 +305,14 @@
         </figure>
       </a>
     </div>
-
-    <a id="all-presta" href="">
-      Voir toutes les prestations
-      <picture>
-        <source srcset="assets/img/build/picto_arrow_white.svg" media="(min-width: 1024px)"/>
-        <img src="assets/img/build/picto_arrow_black.svg"/>
-      </picture>
+    <a id="all-presta" href="#">
+      <button>
+        Voir toutes les prestations
+        <picture>
+          <source srcset="assets/img/build/picto_arrow_white.svg" media="(min-width: 1024px)"/>
+          <img src="assets/img/build/picto_arrow_black.svg"/>
+        </picture>
+      </button>
     </a>
   </section>
 

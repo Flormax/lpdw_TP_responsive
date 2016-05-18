@@ -1,5 +1,6 @@
 .prestations
   font-size: 16px
+  clear: both
   background-color: rgb(247, 247, 247)
   p
     font-family: 'raleway-extralight'
@@ -9,9 +10,12 @@
     span
       color: rgb(203, 155, 43)
 
-@media screen and (max-width: 1023px)
-  .prestations
-    clear: both
+  @media screen and (max-width: 1023px)
+    padding-bottom: 20px
+    span
+      font-style: italic
+    p
+      font-size: 1em
 
     figure
       margin: 0
@@ -20,74 +24,131 @@
       font-family: arial
       font-size: 0.75em
       margin-bottom: 10px
-
     figcaption
       margin-left: 5px
 
-    #presta3
+    #item3
       figcaption
         margin-left: 0
       figure
         padding-left: 5px
 
-
-    #presta2, #presta3
+    #item2, #item3
       figure
         width: 50%
         float: left
-    a
-      text-decoration: none
-      color: rgb(38, 38, 38)
 
-
-    #presta2
+    #item2
       figure
         padding-right: 5px
 
     #all-presta
-      display: inline-block
-      border-width: 1px
-      border-style: solid
-      padding: 15px
-      margin-top: 15px
-      width: calc(100% - 20px)
-      text-align: center
-      clear: both
+      button
+        font-family: "raleway-semibold"
+        font-size: 0.9em
+        display: block
+        background-color: white
+        border: solid 1px black
+        padding: 15px
+        width: calc(100% - 20px)
+        margin: auto
+        margin-top: 30px
+        text-align: center
+        position: relative
+        clear: both
+        img
+          width: 15px
+          position: absolute
+          top: 50%
+          transform: translateY(-55%)
+          right: 7.8%
+
+  @media screen and (min-width: 1024px)
+    padding: 70px 0
+    figure
+      margin: 0
+      padding: 0
+
+    $grid-width: calc(60vw + 20px)
+
+    .grid
+      margin: auto
+      display: table
+      min-width: $grid-width
+      .grid
+        display: table-cell
+        min-width: 30vw
+        max-width: 1200px
+        vertical-align: top
+
+    .item
+      min-width: 30vw
+      height: 30vh
+      min-height: 200px
       position: relative
-      margin-left: 10px
-      margin-right: 10px
-      margin-bottom: 17px
-      img
-        width: 15px
+      display: block
+      figcaption
         position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        right: 7.8%
-
-    span
-      color: rgb(203, 155, 43)
-      font-style: italic
-
-    p
-      font-size: 1em
-
+        bottom: -25px
+      img
+        visibility: hidden
+    //Surbrillance
+    .item::after
+      content: ""
+      background-color: white
+      opacity: 0.07
+      min-width: 30vw
+      height: 30vh
+      min-height: 200px
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      display: none
+    .item:hover::after
+      display: block
+    .item:hover
       span
         color: rgb(203, 155, 43)
 
-@media screen and (min-width: 1024px)
-  .prestations
-    a
-      img
-        filter: alpha(opacity=100)
-        -moz-opacity: 1
-        opacity: 1
-    a:hover
-      img
-        filter: alpha(opacity=80)
-        -moz-opacity: 0.8
-        opacity: 0.8
-      span
-        color: rgb(203, 155, 43)
+    #item1, #item1::after
+      min-width: $grid-width
+    #item1
+      margin: 40px 0
+      background: rgba(0, 255, 255, .5) url('../../img/build/presta1-big.jpg')
+
+    #item2
+      margin: 0 10px 40px 0
+      background: rgba(0, 255, 255, .5) url('../../img/build/presta2-big.jpg')
+
+    #item3
+      margin: 0 10px 0 0
+      background: rgba(0, 255, 255, .5) url('../../img/build/presta3-big.jpg')
+
+    #item4, #item4::after
+      height: calc(60vh + 40px)
+      min-height: 440px
+    #item4
+      margin: 0 0 40px 10px
+      background: rgba(0, 255, 255, .5) url('../../img/build/presta4-big.jpg')
+
+    #item5, #item5::after
+      min-width: 39vw
+    #item5
+      margin: 0 10px 40px 0
+      background: rgba(0, 255, 255, .5) url('../../img/build/presta5-big.jpg')
+
+    #item6, #item6::after
+      min-width: 21vw
+    #item6
+      margin: 0 0 100px 10px
+      background: rgba(0, 255, 255, .5) url('../../img/build/presta6.jpg')
+
+    #item1, #item2, #item3, #item4, #item5, #item6
+      background-size: cover
+      background-repeat: no-repeat
+      background-repeat: no-repeat
 
     p
       font-size: 3em
@@ -97,82 +158,26 @@
       figcaption
         text-align: left
 
-    #presta1
-      display: block
-      width: 82%
-      margin: auto
-      margin-bottom: 10px
-      padding: 0
-      figure
-        margin: 0
-        width: 100%
-        img
-          width: 100%
-
-    .left-right-container-1
-      width: 100%
-      overflow: auto
-
-    .left
-      float: left
-      width: 40%
-      margin: 0
-      margin-left: 9%
-    #presta2, #presta3
-      figure
-        width: 100%
-        margin: 0
-        padding: 0
-        img
-          width: 100%
-
-    .right
-      float: right
-      width: 40%
-      margin: auto
-      margin-right: 9%
-
-    #presta4
-      figure
-        width: 100%
-        margin: 0
-        padding: 0
-        img
-          width: 100%
-
-    #presta5
-      float: left
-      width: 40%
-      margin: auto
-      margin-left: 9%
-      figure
-        width: 100%
-        margin: 0
-        padding: 0
-        img
-          width: 100%
-
-    #presta6
-      float: right
-      width: 25%
-      margin: auto
-      margin-right: 9%
-      figure
-        width: 100%
-        margin: 0
-        padding: 0
-        img
-          width: 100%
-
     #all-presta
-      width: 30%
-      margin-top: 100px
-      margin-left: 30%
-      margin-bottom: 50px
-      padding: 15px
-      background-color: rgb(38,38,38)
-      color: white
-      img
-        width: 20px
-        margin-left: 10%
-        vertical-align: middle
+      display: block
+      width: 25%
+      min-width: 315px
+      margin: auto
+      button
+        height: 50px
+        width: 100%
+        padding: 15px 10% 15px 14%
+        background-color: rgb(38,38,38)
+        color: white
+        border: none
+        text-align: left
+        font-family: "raleway"
+        font-size: 0.9em
+        position: relative
+        img
+          position: absolute
+          right: 25px
+          top: 13px
+          width: 20px
+      button:hover
+        background-color: rgb(50,50,50)
