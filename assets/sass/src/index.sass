@@ -1,4 +1,8 @@
-$width-break: 500px
+@mixin translate($h, $v)
+  -ms-transform: translate($h, $v)
+  -webkit-transform: translate($h, $v)
+  -moz-transform: translate($h, $v)
+  transform: translate($h, $v)
 
 @import 'normalize.scss'
 @import 'font.sass'
@@ -18,15 +22,15 @@ $width-break: 500px
   -moz-box-sizing: border-box
   box-sizing: border-box
 
-input[type="submit"]
-  cursor: pointer
-
 a
   text-decoration: none
   color: inherit
 
-.gold
+.gold, .gold-hover:hover
   color: rgb(203, 155, 43)
+
+.hidden
+  display: none
 
 @media screen and (max-width: 1024px)
   .large-screen
@@ -39,3 +43,11 @@ a
     display: none
   .large-screen
     display: inherit
+
+  .black-btn
+    background-color: rgb(38, 38, 38)
+    border-style: none
+    color: white
+
+  .black-btn:hover
+    background-color: rgb(70, 70, 70)

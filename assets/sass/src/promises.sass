@@ -11,10 +11,8 @@
 
   span
     display: block
-    color: rgb(203, 155, 43)
 
-
-@media screen and (max-width: 1023px)
+@media screen and (max-width: 767px)
   .promises
     font-size: 1em
 
@@ -49,6 +47,35 @@
       padding-left: 15px
       width: calc(100% - 10px)
 
+@media screen and (min-width: 780px) and (max-width: 1023px)
+  .promises
+    img
+      height: 25px
+    ul
+      text-align: center
+      list-style: none
+      width: 100%
+      height: 180px
+      background-color: rgb(38,38,38)
+      margin: 0
+      padding-top: 10px
+      li
+        text-align: left
+        display: inline-block
+        width: 180px
+        height: 160px
+        padding-left: 50px
+        vertical-align: top
+        img
+          top: 25px
+      li:first-child
+        padding-left: 0px
+        img
+          left: -40px
+    span:nth-of-type(1)
+      font-size: 2.1em
+    span:nth-of-type(2)
+      font-size: 1.3em
 @media screen and (min-width: 1024px)
   .promises
     img

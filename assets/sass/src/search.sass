@@ -12,15 +12,13 @@
     input
       border-style: none
       border-width: 0
-      bor
     label
-      z-index: 9999
       position: absolute
-      top: 50%
-      transform: translateY(calc(-50% + 1px))
+      //@include translate(0, calc(-50% + 1px))
       left: 17px
       img
         width: 17px
+        height: auto
     button
       background-color: rgb(38, 38, 38)
       color: white
@@ -46,7 +44,7 @@
           position: absolute
           top: 50%
           right: 4.68%
-          transform: translateY(-50%)
+          @include translate(0, -50%)
           text-align: right
           font-family: arial
           font-size: 0.75em
@@ -73,6 +71,8 @@
       p:last-child
         padding: 10px
         background-color: rgb(196, 196, 196)
+      label
+        top: 15px
 
   @media screen and (min-width: 768px)
     padding-top: 0
@@ -103,26 +103,28 @@
         width: 60%
         position: absolute
         top: 50%
-        transform: translate3d(-50%, calc(-50% - 132px), 0)
+        @include translate(-50%, calc(-50% - 132px))
         text-align: center
         font-family: "raleway"
         font-size: 1.1em
         height: 75px
         width: 550px
-        p
         span:nth-child(1)
           font-size: 3rem
           span
             font-family: "raleway-bold"
         span:nth-child(2)
           line-height: 100px
+      figcaption.ie
+        top: 30%
+        left: 35%
 
     .search-form
       position: relative
       form
+        z-index: 5
         position: absolute
         top: -120px
-        z-index: 200
         height: 120px
         width: 100%
         background-color: rgba(38, 38, 38, 0.5)
@@ -133,7 +135,7 @@
         #resa
           width: 300px
         p:nth-child(2)::before, p:nth-child(3)::before
-          z-index: 99999
+          z-index: 6
           content: ' '
           height: 30px
           width: 2px
@@ -143,19 +145,21 @@
           top: -7px
         #ville
           width: 240px
-          transform: translateX(-4px)
+          @include translate(-4px, 0)
         #date
           width: 200px
-          transform: translateX(-8px)
+          @include translate(-8px, 0)
         p
           display: inline
           margin: 0
           padding: 0
           font-size: 0.9em
         button
-          transform: translateX(-12px)
+          @include translate(-12px, 0)
           height: 60px
           width: 180px
           padding: 15px 35px
         label
           left: 13px
+          top: 0
+          z-index: 7

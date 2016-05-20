@@ -7,8 +7,6 @@
     text-align: center
     padding: 22px
     margin: 0
-    span
-      color: rgb(203, 155, 43)
 
   @media screen and (max-width: 1023px)
     padding-bottom: 20px
@@ -60,7 +58,7 @@
           width: 15px
           position: absolute
           top: 50%
-          transform: translateY(-55%)
+          @include translate(0, -55%)
           right: 7.8%
 
   @media screen and (min-width: 1024px)
@@ -95,7 +93,7 @@
     //Surbrillance
     .item::after
       content: ""
-      background-color: white
+      background-color: black
       opacity: 0.07
       min-width: 30vw
       height: 30vh
@@ -105,9 +103,9 @@
       left: 0
       bottom: 0
       right: 0
-      display: none
-    .item:hover::after
       display: block
+    .item:hover::after
+      display: none
     .item:hover
       span
         color: rgb(203, 155, 43)
@@ -167,9 +165,6 @@
         height: 50px
         width: 100%
         padding: 15px 10% 15px 14%
-        background-color: rgb(38,38,38)
-        color: white
-        border: none
         text-align: left
         font-family: "raleway"
         font-size: 0.9em
@@ -177,7 +172,5 @@
         img
           position: absolute
           right: 25px
-          top: 13px
+          top: 15px
           width: 20px
-      button:hover
-        background-color: rgb(50,50,50)

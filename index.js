@@ -72,9 +72,9 @@ var btn3 = document.getElementById("btn3");
 var pages = document.getElementsByClassName("slider-page");
 var i;
 
-function slideClick(page){
+function slideClick(page, btn){
   document.getElementById(page).className = "slider-page show";
-  slideHide(page, event.target.id);
+  slideHide(page, btn.id);
 }
 
 function slideHide(idPage, idButton){
@@ -92,11 +92,36 @@ function slideHide(idPage, idButton){
 }
 
 btn1.addEventListener("click", function(){
-    slideClick('page1');
+    slideClick('page1', btn1);
 }, false);
 btn2.addEventListener("click", function(){
-    slideClick('page2');
+    slideClick('page2', btn2);
 }, false);
 btn3.addEventListener("click", function(){
-    slideClick('page3');
+    slideClick('page3', btn3);
 }, false);
+
+
+//Hacks IE
+if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
+  var g= document.querySelector('g'),
+    transform= getComputedStyle(g).getPropertyValue('transform');
+  g.setAttribute('transform', transform);
+
+  var ieImgs = document.getElementsByClassName("ie-img");
+  var noIeImgs = document.getElementsByClassName("no-ie-img");
+  var bannerCaption = document.getElementById("banner-caption");
+  for (i = 0; i < ieImgs.length; i++) {
+    var ieImg = ieImgs[i];
+    var noIeImg = noIeImgs[i];
+    noIeImg.className = noIeImg.className + " hidden";
+    ieImg.className = ieImg.className.replace("hidden","");
+  }
+  bannerCaption.className = bannerCaption.className + " ie";
+
+  var nav = document.getElementById("nav");
+  nav.className = nav.className + "ie";
+
+  var searchForm = document.getElementById("search-form");
+  searchForm.className = searchForm.className + "ie";
+}
